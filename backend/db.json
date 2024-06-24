@@ -4,34 +4,24 @@
       "username": "prasad123",
       "password": "12345",
       "id": "b931"
+    },
+    {
+      "id": "1719208673287",
+      "username": "",
+      "password": ""
+    },
+    {
+      "id": "1719208803624",
+      "username": "test",
+      "password": "123"
+    },
+    {
+      "id": "1719209079744",
+      "username": "prasad1",
+      "password": "12345"
     }
   ],
   "quotes": [
-    {
-      "quote": "kuch quote",
-      "author": "Prasad",
-      "id": "0"
-    },
-    {
-      "id": "1",
-      "quote": "Your heart is the size of an ocean. Go find yourself in its hidden depths.",
-      "author": "Rumi"
-    },
-    {
-      "id": "2",
-      "quote": "The Bay of Bengal is hit frequently by cyclones. The months of November and May, in particular, are dangerous in this regard.",
-      "author": "Abdul Kalam"
-    },
-    {
-      "id": "3",
-      "quote": "Thinking is the capital, Enterprise is the way, Hard Work is the solution.",
-      "author": "Abdul Kalam"
-    },
-    {
-      "id": "4",
-      "quote": "If You Can'T Make It Good, At Least Make It Look Good.",
-      "author": "Bill Gates"
-    },
     {
       "id": "5",
       "quote": "Heart be brave. If you cannot be brave, just go. Love's glory is not a small thing.",
@@ -158,34 +148,19 @@
       "author": "Aristotle"
     },
     {
-      "id": "30",
-      "quote": "Life is a gamble. You can get hurt, but people die in plane crashes, lose their arms and legs in car accidents; people die every day. Same with fighters: some die, some get hurt, some go on. You just don't let yourself believe it will happen to you.",
-      "author": "Muhammad Ali"
+      "id": "2",
+      "quote": "The Bay of Bengal is hit frequently by cyclones. The months of November and May, in particular, are dangerous in this regard.",
+      "author": "Abdul Kalam sir"
     },
     {
-      "id": 1719138335769,
-      "quote": "no pain no gain",
-      "author": "prasad"
+      "id": "4",
+      "quote": "If You Can'T Make It Good, At Least Make It Look Good.",
+      "author": "Bill Gates sir"
     },
     {
-      "id": 1719138335769,
-      "quote": "no pain no gain",
-      "author": "prasad"
-    },
-    {
-      "id": 1719138335769,
-      "quote": "no pain no gain",
-      "author": "prasad"
-    },
-    {
-      "id": 1719138335769,
-      "quote": "no pain no gain",
-      "author": "prasad"
-    },
-    {
-      "id": 1719138335769,
-      "quote": "no pain no gain",
-      "author": "prasad"
+      "id": "3",
+      "author": "Abdul Kalam sir",
+      "quote": "Thinking is the capital, Enterprise is the way, Hard Work is the solution."
     }
   ]
 }

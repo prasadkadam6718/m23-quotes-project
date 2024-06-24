@@ -82,7 +82,7 @@ const MainBody = () => {
   let [state, setState] = useState({
     quote: "",
     author: "",
-    id: Date.now()
+    id: Date.now().toString()
   })
   let [api, setApi] = useState([])
 
@@ -105,7 +105,31 @@ const MainBody = () => {
     setState({
       quote: "",
       author: "",
-      id: Date.now()
+      id: Date.now().toString()
+    })
+  }
+
+  let handleDelete = (id) => {
+    axios.delete(`http://localhost:3000/quotes/${id}`).then(() => {
+      axios.get(`http://localhost:3000/quotes`).then((resp) => {
+        setApi(resp.data)
+      })
+    })
+  }
+
+  let handleUpdate = (id) => {
+    axios.delete(`http://localhost:3000/quotes/${id}`).then(() => {
+      axios.get(`http://localhost:3000/quotes`).then((resp) => {
+        setApi(resp.data)
+      })
+    })
+    let objToUpdate = api.find((val, i) => {
+      return val.id == id
+    })
+    setState({
+      author: objToUpdate.author,
+      quote: objToUpdate.quote,
+      id: objToUpdate.id
     })
   }
 
@@ -113,13 +137,16 @@ const MainBody = () => {
     <div id='homeBg' className='w-[75vw] h-[91.3vh]'>
       <div className='w-[100%] h-[48vh] flex justify-center items-center'>
         <form action="">
-          <input placeholder='Enter Your Quote' className='w-[30vw] h-[4vh] p-[20px] m-3' type="text" name='quote' value={quote} onChange={handleChange} /> <br />
-          <input placeholder='Enter Your Name' className='w-[30vw] h-[4vh] p-[20px] m-3' type="text" name='author' value={author} onChange={handleChange} /> <br />
-          <Button className='w-[30vw] h-[4vh] p-[20px] m-3 flex justify-center items-center' onClick={handleSubmit} variant="success">Create</Button>
+          <h1 className='text-center text-white font-extrabold text-5xl flex flex-col justify-center items-center '  >Create Your Own Quote</h1>
+          <div className='ps-10'>
+            <input placeholder='Enter Your Quote' className='w-[30vw] h-[4vh] p-[20px] m-3' type="text" name='quote' value={quote} onChange={handleChange} /> <br />
+            <input placeholder='Enter Your Name' className='w-[30vw] h-[4vh] p-[20px] m-3' type="text" name='author' value={author} onChange={handleChange} /> <br />
+            <Button className='w-[30vw] h-[4vh] p-[20px] m-3 flex justify-center items-center' onClick={handleSubmit} variant="success">Create</Button>
+          </div>
         </form>
       </div>
 
-      <div className='flex flex-wrap  '>
+      <div className='flex flex-wrap border-[1px] border-black bg-[#0000006d] '>
         {
           api.length > 0 && api.map((obj, i) => {
             return (
@@ -128,8 +155,8 @@ const MainBody = () => {
                 <p>Author : {obj.author}</p>
                 <div className='flex justify-around mt-6'>
 
-                  <Button variant="primary">Update</Button>
-                  <Button variant="danger">Delete</Button>
+                  <Button onClick={() => { handleUpdate(obj.id) }} variant="primary">Update</Button>
+                  <Button onClick={() => { handleDelete(obj.id) }} variant="danger">Delete</Button>
                 </div>
               </div>
             )
