@@ -135,7 +135,7 @@ const MainBody = () => {
 
   return (
     <div id='homeBg' className='w-[75vw] h-[91.3vh]'>
-      <div className='w-[100%] h-[48vh] flex justify-center items-center'>
+      <div className='w-[100%] h-[48vh] flex justify-center items-center sticky top-0 z-0'>
         <form action="">
           <h1 className='text-center text-white font-extrabold text-5xl flex flex-col justify-center items-center '  >Create Your Own Quote</h1>
           <div className='ps-10'>
@@ -146,7 +146,7 @@ const MainBody = () => {
         </form>
       </div>
 
-      <div className='flex flex-wrap border-[1px] border-black bg-[#0000006d] '>
+      <div className='flex flex-wrap border-[1px] border-black bg-[#0000006d] relative z-10 '>
         {
           api.length > 0 && api.map((obj, i) => {
             return (
